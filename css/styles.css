@@ -1,0 +1,728 @@
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+table.container {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+div.form-container {
+  max-width: 450px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #000;
+}
+
+div.form-container h1 {
+  margin: 0 0 10px 0;
+}
+
+div.form-container p {
+  margin: 10px 0;
+}
+
+div.form-container div.response-message {
+  text-align: center;
+}
+
+form.ajax-form div.label {
+  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 5px;
+  color: #000
+}
+
+form.ajax-form div.input {
+  position: relative;
+  display: block;
+  color: #000;
+  background: transparent;
+  font-size: 16px;
+  line-height: 26px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto 20px auto;
+}
+
+form.ajax-form div.input.required:after {
+  position: absolute;
+  top: 1px;
+  right: 4px;
+  display: block;
+  content: "*required";
+  font-size: 12px;
+  line-height: 12px;
+  color: rgba(0, 0, 0, 0.4)
+}
+
+form.ajax-form div.textarea {
+  position: relative;
+  display: block;
+  color: #000;
+  background: transparent;
+  font-size: 16px;
+  line-height: 26px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto 20px auto
+}
+
+form.ajax-form div.textarea.required:after {
+  position: absolute;
+  top: 1px;
+  right: 4px;
+  display: block;
+  content: "*required";
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.4)
+}
+
+form.ajax-form div.input input {
+  display: block;
+  color: #000;
+  background: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+  width: 100%;
+  padding: 20px 14px 20px 14px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  outline: none
+}
+
+form.ajax-form div.input input:invalid,
+div.input textarea:invalid {
+  box-shadow: none
+}
+
+form.ajax-form div.input input:disabled {
+  cursor: not-allowed;
+  color: rgba(58, 57, 57, 0.8)
+}
+
+form.ajax-form div.input input:-moz-read-only,
+form.ajax-form div.input input:read-only {
+  cursor: not-allowed;
+  color: rgba(58, 57, 57, 0.8)
+}
+
+form.ajax-form div.input input[type="number"] {
+  padding-right: 80px
+}
+
+form.ajax-form div.input input[type=number]::-webkit-inner-spin-button,
+form.ajax-form div.input input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0
+}
+
+form.ajax-form div.input input[type=number] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+form.ajax-form div.textarea textarea {
+  display: block;
+  color: #000;
+  background: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 10px 14px 10px 14px;
+  border: 1px solid #000;
+  outline: none
+}
+
+form.ajax-form div.selectlist {
+  position: relative;
+  display: block;
+  color: #000;
+  background: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  width: 100%;
+  height: 64px;
+  box-sizing: border-box;
+  margin: 0 auto 20px auto
+}
+
+form.ajax-form div.selectlist:before {
+  content: url("../img/arrow-down.svg");
+  display: block;
+  width: 15px;
+  height: 6px;
+  position: absolute;
+  top: 15px;
+  right: 8px
+}
+
+form.ajax-form div.selectlist.required:after {
+  position: absolute;
+  top: 1px;
+  right: 4px;
+  display: block;
+  content: "*required";
+  font-size: 12px;
+  line-height: 12px;
+  color: rgba(0, 0, 0, 0.4)
+}
+
+form.ajax-form div.selectlist.disabled:before {
+  display: none
+}
+
+form.ajax-form div.selectlist select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: transparent;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  width: 100%;
+  height: 64px;
+  border: 0 none;
+  padding: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 2
+}
+
+form.ajax-form div.selectlist select:disabled {
+  cursor: not-allowed;
+  color: rgba(58, 57, 57, 0.8)
+}
+
+form.ajax-form div.selectlist select optgroup,
+div.selectlist select option {
+  padding: 8px
+}
+
+form.ajax-form div.selectlist select option:disabled {
+  display: none
+}
+
+form.ajax-form div.submitbox {
+  position: relative
+}
+
+form.ajax-form div.submitbox .button {
+  display: block;
+  padding: 20px 40px 20px 40px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #fff;
+  background: #000;
+  border: 1px solid #000;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.6s;
+}
+
+form.ajax-form div.submitbox .button:hover,
+form.ajax-form div.submitbox .button:focus {
+  color: #000;
+  background: #fff;
+  border-color: #000;
+  text-decoration: none
+}
+
+form.ajax-form div.submitbox .button:disabled {
+  background: rgba(200, 200, 200, 0.2);
+  border-color: rgba(200, 200, 200, 0.2);
+  color: rgba(200, 200, 200, 0.6);
+  cursor: not-allowed
+}
+
+form.ajax-form div.submitbox span.button.disabled {
+  background: rgba(200, 200, 200, 0.2);
+  border-color: rgba(200, 200, 200, 0.2);
+  color: rgba(200, 200, 200, 0.6);
+  cursor: not-allowed
+}
+
+form.ajax-form div.submitbox .button.animated {
+  line-height: 26px !important;
+  font: 300 2em/90% "Open Sans", sans-serif;
+  -webkit-animation: ANIMATE-SUBMITBOX 0.8s steps(10, end) infinite;
+  -moz-animation: ANIMATE-SUBMITBOX 0.8s steps(10, end) infinite;
+  -ms-animation: ANIMATE-SUBMITBOX 0.8s steps(10, end) infinite;
+  -o-animation: ANIMATE-SUBMITBOX 0.8s steps(10, end) infinite;
+  animation: ANIMATE-SUBMITBOX 0.8s steps(10, end) infinite;
+}
+
+@keyframes ANIMATE-SUBMITBOX {
+
+  0%,
+  20% {
+    color: rgba(33, 30, 30, 0);
+    text-shadow: -.0em 0 0 rgba(33, 30, 30, 0), .0em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  40% {
+    text-shadow: -.10em 0 0 rgba(33, 30, 30, 0), .10em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  60% {
+    text-shadow: -.20em 0 0 rgba(33, 30, 30, 0), .20em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  80%,
+  100% {
+    color: rgba(33, 30, 30, 1);
+    text-shadow: -.40em 0 0 rgba(33, 30, 30, 1), .40em 0 0 rgba(33, 30, 30, 1)
+  }
+}
+
+@-moz-keyframes ANIMATE-SUBMITBOX {
+
+  0%,
+  20% {
+    color: rgba(33, 30, 30, 0);
+    text-shadow: -.0em 0 0 rgba(33, 30, 30, 0), .0em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  40% {
+    text-shadow: -.10em 0 0 rgba(33, 30, 30, 0), .10em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  60% {
+    text-shadow: -.20em 0 0 rgba(33, 30, 30, 0), .20em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  80%,
+  100% {
+    color: rgba(33, 30, 30, 1);
+    text-shadow: -.40em 0 0 rgba(33, 30, 30, 1), .40em 0 0 rgba(33, 30, 30, 1)
+  }
+}
+
+@-webkit-keyframes ANIMATE-SUBMITBOX {
+
+  0%,
+  20% {
+    color: rgba(33, 30, 30, 0);
+    text-shadow: -.0em 0 0 rgba(33, 30, 30, 0), .0em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  40% {
+    text-shadow: -.10em 0 0 rgba(33, 30, 30, 0), .10em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  60% {
+    text-shadow: -.20em 0 0 rgba(33, 30, 30, 0), .20em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  80%,
+  100% {
+    color: rgba(33, 30, 30, 1);
+    text-shadow: -.40em 0 0 rgba(33, 30, 30, 1), .40em 0 0 rgba(33, 30, 30, 1)
+  }
+}
+
+@-ms-keyframes ANIMATE-SUBMITBOX {
+
+  0%,
+  20% {
+    color: rgba(33, 30, 30, 0);
+    text-shadow: -.0em 0 0 rgba(33, 30, 30, 0), .0em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  40% {
+    text-shadow: -.10em 0 0 rgba(33, 30, 30, 0), .10em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  60% {
+    text-shadow: -.20em 0 0 rgba(33, 30, 30, 0), .20em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  80%,
+  100% {
+    color: rgba(33, 30, 30, 1);
+    text-shadow: -.40em 0 0 rgba(33, 30, 30, 1), .40em 0 0 rgba(33, 30, 30, 1)
+  }
+}
+
+@-o-keyframes ANIMATE-SUBMITBOX {
+
+  0%,
+  20% {
+    color: rgba(33, 30, 30, 0);
+    text-shadow: -.0em 0 0 rgba(33, 30, 30, 0), .0em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  40% {
+    text-shadow: -.10em 0 0 rgba(33, 30, 30, 0), .10em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  60% {
+    text-shadow: -.20em 0 0 rgba(33, 30, 30, 0), .20em 0 0 rgba(33, 30, 30, 0)
+  }
+
+  80%,
+  100% {
+    color: rgba(33, 30, 30, 1);
+    text-shadow: -.40em 0 0 rgba(33, 30, 30, 1), .40em 0 0 rgba(33, 30, 30, 1)
+  }
+}
+
+form.ajax-form div.submitbox .button.preview {
+  color: #bbbbbb;
+  background-color: #f8f8f8;
+  border-color: #f8f8f8
+}
+
+form.ajax-form div.submitbox .button.preview:hover,
+form.ajax-form div.submitbox .button.preview:focus {
+  color: #fff;
+  background-color: #333;
+  border-color: #333
+}
+
+form.ajax-form div.form-buttons {
+  text-align: right
+}
+
+form.ajax-form div.form-buttons div.submitbox {
+  display: inline-block;
+  width: auto;
+}
+
+form.ajax-form div.checkbox {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px
+}
+
+form.ajax-form div.checkbox>input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  margin: 0;
+  height: 16px;
+  opacity: 0;
+  outline: none;
+  z-index: -999;
+}
+
+form.ajax-form div.checkbox label {
+  display: block;
+  color: #000;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: justify;
+  cursor: pointer;
+  margin: 0;
+  padding-left: 0;
+  z-index: 1;
+}
+
+form.ajax-form div.checkbox label:before {
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  z-index: 1;
+}
+
+form.ajax-form div.checkbox>input:checked+label:before {
+  background-image: url("../img/check.svg");
+}
+
+form.ajax-form div.checkbox>input:checked+span.error+label:before {
+  background-image: url("../img/check.svg");
+}
+
+form.ajax-form div.checkbox label div.input {
+  display: inline-block;
+  vertical-align: middle
+}
+
+form.ajax-form div.checkbox a {
+  color: #000;
+}
+
+form.ajax-form div.checkbox a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+form.ajax-form div.radio {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px
+}
+
+form.ajax-form div.radio>input {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 16px;
+  margin: 0;
+  height: 16px;
+  opacity: 0;
+  outline: none;
+  z-index: -999;
+}
+
+form.ajax-form div.radio label {
+  display: block;
+  color: #000;
+  font-size: 16px;
+  line-height: 26px;
+  cursor: pointer;
+  margin: 0;
+  padding-left: 0;
+  z-index: 1;
+}
+
+form.ajax-form div.radio label:before {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  z-index: 1;
+}
+
+form.ajax-form div.radio>input:checked+label:before {
+  background-image: url("../img/check.svg");
+}
+
+form.ajax-form div.radio>input:checked+span.error+label:before {
+  background-image: url("../img/check.svg");
+}
+
+form.ajax-form div.radio label div.input {
+  display: inline-block;
+  vertical-align: middle
+}
+
+form.ajax-form div.radio a {
+  color: #000
+}
+
+form.ajax-form div.radio a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+form.ajax-form span.error {
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  background: #f00;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 99
+}
+
+form.ajax-form span.error:after,
+form.ajax-form span.error:before {
+  top: 100%;
+  left: 20px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none
+}
+
+form.ajax-form span.error:after {
+  border-color: rgba(255, 0, 0, 0);
+  border-top-color: #f00;
+  border-width: 10px;
+  margin-left: -10px
+}
+
+form.ajax-form span.error:before {
+  border-color: rgba(255, 0, 0, 0);
+  border-top-color: #f00;
+  border-width: 10px;
+  margin-left: -10px
+}
+
+form.ajax-form .form-info {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000;
+  text-align: center;
+  z-index: 9999
+}
+
+form.ajax-form .form-info.success {
+  position: absolute;
+  left: -5px;
+  bottom: 100%;
+  min-width: 190px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  background: rgba(0, 128, 0, 1);
+  padding: 5px;
+  box-sizing: border-box;
+  z-index: 9999
+}
+
+form.ajax-form .form-info.success:after,
+form.form-info.success:before {
+  top: 100%;
+  left: 20px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none
+}
+
+form.ajax-form .form-info.success:after {
+  border-color: rgba(0, 128, 0, 0);
+  border-top-color: rgba(0, 128, 0, 1);
+  border-width: 10px;
+  margin-left: -10px
+}
+
+form.ajax-form .form-info.success:before {
+  border-color: rgba(0, 128, 0, 0);
+  border-top-color: rgba(0, 128, 0, 1);
+  border-width: 10px;
+  margin-left: -10px
+}
+
+form.ajax-form .form-info.error {
+  position: absolute;
+  left: -5px;
+  bottom: 100%;
+  min-width: 190px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  background: rgba(255, 0, 0, 1);
+  padding: 5px;
+  box-sizing: border-box;
+  z-index: 9999
+}
+
+form.ajax-form .form-info.error:after,
+form.form-info.error:before {
+  top: 100%;
+  left: 20px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none
+}
+
+form.ajax-form .form-info.error:after {
+  border-color: rgba(255, 0, 0, 0);
+  border-top-color: rgba(255, 0, 0, 1);
+  border-width: 10px;
+  margin-left: -10px
+}
+
+form.ajax-form .form-info.error:before {
+  border-color: rgba(255, 0, 0, 0);
+  border-top-color: rgba(255, 0, 0, 1);
+  border-width: 10px;
+  margin-left: -10px
+}
+
+form.ajax-form div.checkbox span.error {
+  top: -28px
+}
+
+form.ajax-form div.radio span.error {
+  top: -28px
+}
+
+form.ajax-form div.form-column {
+  display: flex;
+  align-items: flex-start
+}
+
+form.ajax-form div.form-column>div {
+  flex-basis: 50%;
+  box-sizing: border-box
+}
+
+form.ajax-form div.form-column>div:first-child {
+  padding-right: 10px
+}
+
+form.ajax-form div.form-column>div:last-child {
+  padding-left: 10px
+}
+
+@media(max-width:380px) {
+  form.ajax-form div.form-column {
+    flex-wrap: wrap
+  }
+
+  form.ajax-form div.form-column>div {
+    flex-basis: 100%
+  }
+
+  form.ajax-form div.form-column>div:first-child {
+    padding-right: 0
+  }
+
+  form.ajax-form div.form-column>div:last-child {
+    padding-left: 0
+  }
+}

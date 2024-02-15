@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="author" content="Marcin Szczepkowski">
+  <title>Send Mail API</title>
+  <link href="css/styles.css" rel="stylesheet" type="text/css" media="all" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/send-mail.js"></script>
+</head>
+
+<body>
+  <table border="0" cellpadding="0" cellspacing="0" class="container">
+    <tr>
+      <td>
+        <div class="form-container">
+          <h1>Send Mail API</h1>
+          <p>Rest API using PHPMailer 5.5 and jQuery Ajax.</p>
+          <form class="ajax-form test-mail">
+            <div class="form-column">
+              <div class="form-column__first">
+                <div class="label">Full name:</div>
+                <div class="input"><input type="text" name="fullName" placeholder="Full name:" /></div>
+              </div>
+              <div class="form-column__second">
+                <div class="label">Email address:</div>
+                <div class="input"><input type="email" name="email" placeholder="Email address:" /></div>
+              </div>
+            </div>
+            <div class="label">Receiver (email):</div>
+            <div class="input"><input type="email" name="receiver" placeholder="Email address:" /></div>
+            <div class="checkbox"><input name="regulationConsent" id="regulationConsent" value="yes"
+                type="checkbox" /><label for="regulationConsent">I have read the Regulations and the information clause contained therein regarding the processing of personal data and I accept all its provisions.</label></div>
+            <div class="submitbox"><input type="submit" class="button" value="Send" /></div>
+          </form>
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
